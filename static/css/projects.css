@@ -1,0 +1,88 @@
+/* projects */
+
+#projects h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#projects a {
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#projects .badge {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    margin: 0 1%;
+}
+
+#projects .card {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    /* 保持横向布局 */
+        display: flex;
+        flex-direction: row;
+        min-height: 100px;
+    
+        /* 将圆角和裁剪放到外层卡片上 */
+        border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* 右侧的文字区域，让其成为一个纵向 Flex 容器 */
+#projects .card .card-body {
+    order: 2;
+    width: 60%;
+
+    /* 使内部的 footer 能贴到底部 */
+    display: flex;
+    flex-direction: column;
+
+    /* 根据需要的内边距进行设置 */
+    padding: 1rem;
+
+    /* 如果想让 card-body 和 card-footer 看上去背景一致，可以用透明或统一颜色 */
+    background: transparent;
+}
+
+/* 调整 card-footer 的外观和位置 */
+#projects .card .card-footer {
+    order: 2;
+    /* 让它在纵向上自动顶到底部 */
+    margin-top: auto;
+
+    /* 去除默认边框或背景，让其看起来跟 card-body 融为一体 */
+    background: transparent;
+    border-top: none;
+
+    /* 如果需要与 card-body 一致的 padding，可以这样 */
+    padding: 1rem;
+}
+
+/* 左侧图片区域 */
+#projects .card .card-head {
+    order: 1;
+        width: 40%;
+    overflow: hidden;
+}
+
+/* 图片自适应并带缩放效果 */
+#projects .card .card-head .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#projects .card:hover .card-head .card-img-top {
+    transform: scale(1.2);
+}
+
+#projects .float-end .btn {
+    transition: none;
+    border-radius: .5rem !important;
+    border-color: var(--primary-color) !important;
+}
+
+#projects .float-end .btn:focus {
+    box-shadow: none !important;
+}
