@@ -73,9 +73,9 @@
     transition: transform 0.3s;
 }
 
-#projects .card:hover .card-head .card-img-top {
+/* #projects .card:hover .card-head .card-img-top {
     transform: scale(1.2);
-}
+} */
 
 #projects .float-end .btn {
     transition: none;
